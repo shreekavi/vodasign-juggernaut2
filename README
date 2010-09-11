@@ -9,3 +9,16 @@ That experiment helped me understand realtime messaging and handling request/res
 node.js has intrigued me quite a lot in the recent past. 
 
 This project is an experiment to understand how Rails and node.js can play well with each other.
+
+== My understanding
+
+The Juggernaut Pub/Sub now runs on node.js
+The server provides a simple HTML page to render the published messages
+
+We have a ruby client to publish or subscribe
+
+Redis is needed to hold the messages 
+
+node-redis client writes the published messages in ruby in to the Juggernaut port.
+
+Try daemonizing node with the help of "http://kevin.vanzonneveld.net/techblog/article/run_nodejs_as_a_service_on_ubuntu_karmic/"
